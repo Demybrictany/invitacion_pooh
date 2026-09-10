@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <main class="invitation">
     <section class="cover section-wrap" aria-label="Portada de la invitación">
       <div class="cover-art" aria-hidden="true"></div>
@@ -38,7 +39,7 @@
       <div class="scroll-cue" aria-hidden="true"><span></span>desliza para descubrir</div>
     </section>
 
-    <section class="story section-wrap">
+    <section class="story section-wrap section-animate">
       <div class="section-mark" aria-hidden="true">01</div>
       <p class="eyebrow">Una sorpresa llena de amor</p>
       <h2>Muy pronto<br>lo sabremos</h2>
@@ -72,7 +73,7 @@
       </div>
     </section>
 
-    <section class="details section-wrap">
+    <section class="details section-wrap section-animate">
       <div class="section-mark" aria-hidden="true">02</div>
       <p class="eyebrow">El amor se multiplicará</p>
       <h2>Una nueva sonrisa<br>iluminará nuestras vidas</h2>
@@ -87,13 +88,18 @@
       </div>
     </section>
 
-    <section class="closing section-wrap">
+    <section class="closing section-wrap section-animate">
       <div class="closing-art" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span></div>
       <p class="eyebrow">La sorpresa está por comenzar</p>
       <h2>No faltes,<br><em>te esperamos</em></h2>
       <p class="closing-copy">Ven a compartir con nosotros este momento que guardaremos para siempre en el corazón.</p>
       <div class="location-video">
-        <video src="Ubicacion.mp4" autoplay muted loop playsinline controls preload="metadata" aria-label="Video de la ubicación del evento"></video>
+        <video src="Ubicacion.mp4" loop playsinline controls preload="metadata" aria-label="Video de la ubicación del evento"></video>
+        <button class="sound-toggle" type="button">Activar sonido</button>
+      </div>
+      <div class="whatsapp-actions" aria-label="Contactar por WhatsApp">
+        <a href="https://wa.me/50237883705" target="_blank" rel="noopener noreferrer">WhatsApp 3788 3705</a>
+        <a href="https://wa.me/50240120934" target="_blank" rel="noopener noreferrer">WhatsApp 4012 0934</a>
       </div>
       <p class="signature">Con cariño,<br><strong>José &amp; Jisel</strong></p>
     </section>

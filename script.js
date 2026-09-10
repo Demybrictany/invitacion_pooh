@@ -1,8 +1,23 @@
 const revealItems = document.querySelectorAll('.reveal');
+const animatedSections = document.querySelectorAll('.section-animate');
 
 const voteKey = 'revelacion-jose-jisel-votes';
 const savedVotes = JSON.parse(localStorage.getItem(voteKey) || '{"boy":0,"girl":0}');
 const voteButtons = document.querySelectorAll('[data-vote]');
+const locationVideo = document.querySelector('.location-video video');
+const soundToggle = document.querySelector('.sound-toggle');
+
+soundToggle.addEventListener('click', async () => {
+  locationVideo.muted = false;
+  locationVideo.volume = 1;
+  soundToggle.textContent = 'Sonido activado';
+  soundToggle.classList.add('is-active');
+  try {
+    await locationVideo.play();
+  } catch (error) {
+    soundToggle.textContent = 'Toca el video para reproducir';
+  }
+});
 
 function renderVotes() {
   const total = savedVotes.boy + savedVotes.girl;
@@ -44,3 +59,4 @@ const revealOnScroll = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.12 });
 
 revealItems.forEach((item) => revealOnScroll.observe(item));
+animatedSections.forEach((section) => revealOnScroll.observe(section));
