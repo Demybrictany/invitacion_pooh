@@ -48,6 +48,13 @@ document.addEventListener('pointerdown', (event) => {
   if (!event.target.closest('.music-toggle') && backgroundMusic.paused) startMusic();
 }, { capture: true, once: true });
 
+function startMusicFromPage(event) {
+  if (!event.target.closest('.music-toggle') && backgroundMusic.paused) startMusic();
+}
+
+document.addEventListener('click', startMusicFromPage, { capture: true });
+document.addEventListener('touchend', startMusicFromPage, { capture: true, passive: true });
+
 document.addEventListener('keydown', (event) => {
   if (event.key !== 'Tab' && backgroundMusic.paused) startMusic();
 }, { once: true });
