@@ -171,6 +171,15 @@ em { display: inline-block; color: var(--rose); font-family: 'Italianno', 'Cormo
 .vote-note { display: flex; align-items: flex-start; gap: 9px; margin: 14px 2px 0; padding: 10px 11px; border-left: 2px solid var(--yellow); background: rgba(244, 215, 139, .2); color: var(--muted); text-align: left; }
 .vote-note p { margin: 0; font-size: .88rem; line-height: 1.5; }
 .vote-note-icon { color: var(--honey); font-size: .8rem; line-height: 1.2; }
+.guess-gift { position: relative; margin: 38px auto 0; padding: 24px 16px 26px; border: 2px dashed rgba(196, 141, 53, .48); background: rgba(255, 250, 240, .8); text-align: center; animation: gift-pulse 3.2s ease-in-out infinite; }
+.guess-gift-spark { position: absolute; top: -15px; left: 50%; display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: var(--honey); color: #fffaf0; font-size: .85rem; transform: translateX(-50%); animation: gift-spark 2.4s ease-in-out infinite; }
+.guess-gift-kicker { margin: 0 0 12px; color: var(--honey); font-size: .82rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.guess-gift-message { display: flex; flex-direction: column; align-items: center; gap: 9px; margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.55rem, 7vw, 2.15rem); line-height: .94; }
+.guess-gift-message strong { display: block; animation: gift-sway 3.2s ease-in-out infinite; }
+.guess-gift-message em { font-size: 1.28em; }
+.guess-gift-boy { color: #315f71; }
+.guess-gift-girl { color: #a65f68; animation-delay: .35s !important; }
+.guess-gift-or { color: var(--honey); font: 700 .78rem 'DM Sans', sans-serif; letter-spacing: .15em; text-transform: uppercase; }
 .details { min-height: min(1000px, 177.78vw); background-color: #fff5f9; background-image: linear-gradient(rgba(255, 245, 249, .1), rgba(255, 245, 249, .1)), url('Fondo 3.png'); background-position: center top; background-size: 100% auto; background-repeat: no-repeat; text-align: center; padding-top: 95px; }
 .details h2 { margin-bottom: 20px; }
 .details-copy strong { color: var(--rose); font-weight: 700; }
@@ -237,6 +246,9 @@ body:not(.motion-off) p, body:not(.motion-off) h1, body:not(.motion-off) h2, bod
 @keyframes text-breathe { 0%, 100% { text-shadow: 0 0 0 rgba(196, 141, 53, 0); } 50% { text-shadow: 0 2px 12px rgba(196, 141, 53, .13); } }
 @keyframes sparkle-float { 0%, 100% { opacity: .18; transform: translateY(7px) scale(.7) rotate(0); } 50% { opacity: .95; transform: translateY(-7px) scale(1.15) rotate(18deg); } }
 @keyframes info-bounce { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-9px) rotate(4deg); } }
+@keyframes gift-pulse { 0%, 100% { box-shadow: 0 0 0 rgba(196, 141, 53, 0); } 50% { box-shadow: 0 8px 24px rgba(196, 141, 53, .13); } }
+@keyframes gift-spark { 0%, 100% { transform: translateX(-50%) rotate(0) scale(.9); } 50% { transform: translateX(-50%) rotate(18deg) scale(1.08); } }
+@keyframes gift-sway { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-3px) rotate(1deg); } }
 @media (min-width: 561px) { .invitation { margin: 26px auto; } }
 @media (max-width: 390px) { .info-float { right: 14px; bottom: 68px; width: 76px; height: 76px; } .info-float-label { font-size: .5rem; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } .reveal, .section-animate > *:not(.section-mark) { opacity: 1; transform: none; } }
