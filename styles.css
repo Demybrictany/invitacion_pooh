@@ -139,9 +139,10 @@ em { display: inline-block; color: var(--rose); font-family: 'Italianno', 'Cormo
 .section-mark { position: absolute; top: 27px; left: 28px; color: rgba(196, 141, 53, .72); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; }
 .story h2 { margin-bottom: 20px; }
 .possibilities { display: grid; gap: 15px; margin-top: 38px; text-align: left; }
-.possibility { position: relative; min-height: 154px; padding: 24px 22px; overflow: hidden; border-radius: 2px; transition: transform .3s ease, box-shadow .3s ease; }
+.possibility { position: relative; min-height: 154px; padding: 24px 42% 24px 22px; overflow: hidden; border-radius: 2px; transition: transform .3s ease, box-shadow .3s ease; }
 .possibility:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(38, 52, 61, .12); }
 .possibility::after { content: ''; position: absolute; right: -30px; bottom: -55px; width: 145px; height: 145px; border: 1px solid currentColor; border-radius: 50%; opacity: .32; }
+.possibility-image { position: absolute; z-index: 0; top: 0; right: 0; width: 40%; height: 100%; object-fit: cover; object-position: center; opacity: .9; mix-blend-mode: multiply; }
 .possibility-boy { color: #315f71; background: var(--sky); }
 .possibility-girl { color: #87525b; background: var(--blush); }
 .possibility-label { display: block; margin-bottom: 10px; font-size: .85rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; opacity: .72; }
