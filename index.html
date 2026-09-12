@@ -16,10 +16,23 @@
   <button class="music-toggle is-playing" type="button" aria-label="Silenciar música" aria-pressed="true" title="Silenciar música">
     <span class="music-icon" aria-hidden="true">♫</span>
   </button>
-  <a class="info-float" href="#detalles" aria-label="Ver más información" title="Más información">
+  <button class="info-float" type="button" aria-label="Ver más información" title="Más información" aria-controls="contact-modal" aria-expanded="false">
     <span class="info-float-mark" aria-hidden="true">i</span>
     <span class="info-float-label">más<br>información</span>
-  </a>
+  </button>
+  <div class="contact-modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+    <div class="contact-modal-card">
+      <button class="contact-modal-close" type="button" aria-label="Cerrar ventana">&times;</button>
+      <span class="contact-modal-spark" aria-hidden="true">✦</span>
+      <p class="contact-modal-kicker">¿Te gustó esta invitación?</p>
+      <h2 id="contact-modal-title">Crea un momento<br><em>inolvidable</em></h2>
+      <p>Escríbeme y con gusto preparo una invitación personalizada para tu celebración.</p>
+      <a class="contact-modal-whatsapp" href="https://wa.me/50237344348?text=Hola%2C%20quiero%20cotizar%20el%20precio%20de%20una%20invitaci%C3%B3n%20como%20la%20de%20revelaci%C3%B3n%20de%20g%C3%A9nero%20Winnie%20de%20Pooh" target="_blank" rel="noopener noreferrer">
+        <span class="whatsapp-icon" aria-hidden="true">◌</span>
+        <span>Escribir por WhatsApp<strong>Quiero cotizar mi invitación</strong></span>
+      </a>
+    </div>
+  </div>
   <main class="invitation">
     <section class="cover section-wrap" aria-label="Portada de la invitación">
       <div class="cover-art" aria-hidden="true"></div>
@@ -127,6 +140,7 @@
         <video src="Ubicacion.mp4" loop playsinline controls preload="metadata" aria-label="Video de la ubicación del evento"></video>
         <button class="sound-toggle" type="button">Activar sonido</button>
       </div>
+      <p class="whatsapp-heading">Cualquier duda de la fiesta,<br>comunícate a los siguientes números:</p>
       <div class="whatsapp-actions" aria-label="Contactar por WhatsApp">
         <a href="https://wa.me/50237883705" target="_blank" rel="noopener noreferrer">WhatsApp 3788 3705</a>
         <a href="https://wa.me/50240120934" target="_blank" rel="noopener noreferrer">WhatsApp 4012 0934</a>

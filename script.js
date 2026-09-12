@@ -5,6 +5,9 @@ const backgroundMusic = document.querySelector('.background-music');
 const musicToggle = document.querySelector('.music-toggle');
 const locationVideo = document.querySelector('.location-video video');
 const soundToggle = document.querySelector('.sound-toggle');
+const infoFloat = document.querySelector('.info-float');
+const contactModal = document.querySelector('.contact-modal');
+const contactModalClose = document.querySelector('.contact-modal-close');
 const resultsEndpoint = 'https://docs.google.com/spreadsheets/d/1fD0eW6Y8T4xXm9pF8fhXI0XHGnK_0C1yJJ1CYlud23E/gviz/tq?tqx=out:json;responseHandler:handleSheetResponse';
 
 backgroundMusic.volume = 1;
@@ -43,6 +46,25 @@ backgroundMusic.addEventListener('play', () => updateMusicToggle(true));
 backgroundMusic.addEventListener('pause', () => updateMusicToggle(false));
 backgroundMusic.addEventListener('error', () => updateMusicToggle(false));
 startMusic();
+
+function closeContactModal() {
+  contactModal.hidden = true;
+  infoFloat.setAttribute('aria-expanded', 'false');
+}
+
+infoFloat.addEventListener('click', () => {
+  contactModal.hidden = false;
+  infoFloat.setAttribute('aria-expanded', 'true');
+  contactModalClose.focus();
+});
+
+contactModalClose.addEventListener('click', closeContactModal);
+contactModal.addEventListener('click', (event) => {
+  if (event.target === contactModal) closeContactModal();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !contactModal.hidden) closeContactModal();
+});
 
 document.addEventListener('pointerdown', (event) => {
   if (!event.target.closest('.music-toggle') && backgroundMusic.paused) startMusic();
