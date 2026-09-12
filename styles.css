@@ -170,7 +170,7 @@ em { display: inline-block; color: var(--rose); font-family: 'Italianno', 'Cormo
 .vote-note { display: flex; align-items: flex-start; gap: 9px; margin: 14px 2px 0; padding: 10px 11px; border-left: 2px solid var(--yellow); background: rgba(244, 215, 139, .2); color: var(--muted); text-align: left; }
 .vote-note p { margin: 0; font-size: .88rem; line-height: 1.5; }
 .vote-note-icon { color: var(--honey); font-size: .8rem; line-height: 1.2; }
-.details { background-color: #fff5f9; background-image: linear-gradient(rgba(255, 245, 249, .1), rgba(255, 245, 249, .1)), url('Fondo 3.png'); background-position: center top; background-size: 100% auto; background-repeat: no-repeat; text-align: center; padding-top: 95px; }
+.details { min-height: min(1000px, 177.78vw); background-color: #fff5f9; background-image: linear-gradient(rgba(255, 245, 249, .1), rgba(255, 245, 249, .1)), url('Fondo 3.png'); background-position: center top; background-size: 100% auto; background-repeat: no-repeat; text-align: center; padding-top: 95px; }
 .details h2 { margin-bottom: 20px; }
 .details-copy strong { color: var(--rose); font-weight: 700; }
 .event-card { display: flex; align-items: center; justify-content: center; gap: 26px; margin: 34px auto 17px; padding: 21px 16px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background-color .35s ease, transform .35s ease; }
